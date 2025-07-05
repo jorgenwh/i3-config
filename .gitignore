@@ -1,0 +1,18 @@
+# Backup files
+*~
+*.bak
+*.swp
+*.swo
+*.tmp
+
+# Lock files
+*.lock
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Personal/sensitive files (add more as needed)
+# Uncomment and modify as needed:
+# secrets.conf
+# private_*

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep:*)",
+      "Bash(/home/sphere/.config/i3/claude_usage.sh:*)",
+      "Bash(ccusage daily)",
+      "Bash(/home/sphere/.config/i3/claude_daily.sh:*)"
+    ],
+    "deny": []
+  }
+}
