@@ -3,7 +3,13 @@
 import i3ipc
 
 i3 = i3ipc.Connection(auto_reconnect=True)
-i3.command("split h")
+
+
+def set_split_horizontal(i3):
+    i3.command("split h")
+
+def set_split_vertical(i3):
+    i3.command("split v") 
 
 
 def on_window_new(i3, e):
@@ -11,10 +17,11 @@ def on_window_new(i3, e):
     windows = [n for n in workspace.leaves() if n.window is not None]
     count = len(windows)
 
+    print(count)
     if count >= 2:
-        i3.command("split v")
+        set_split_vertical(i3)
     else:
-        i3.command("split h")
+        set_split_horizontal(i3)
 
 
 def on_window_close(i3, e):
@@ -22,10 +29,11 @@ def on_window_close(i3, e):
     windows = [n for n in workspace.leaves() if n.window is not None]
     count = len(windows)
 
+    print(count)
     if count >= 2:
-        i3.command("split v")
+        set_split_vertical(i3)
     else:
-        i3.command("split h")
+        set_split_horizontal(i3)
 
 
 i3.on("window::new", on_window_new)
