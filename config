@@ -193,18 +193,17 @@ set $it  #FFFFFF
 set $t  #FFFFFF
 
 bar {
-	font pango: UbuntuMono Nerd Font Bold 16
-	tray_output none
-	position bottom
-	colors {
-		background $bg
-		separator  $bg
-		focused_workspace $t $t $bg
-		active_workspace  $bg $bg $t
-		inactive_workspace $bg $bg $t
-	}
+    font pango: UbuntuMono Nerd Font Bold 16
+    tray_output none
+    position bottom
+    colors {
+        background $bg
+        separator  $bg
+        focused_workspace $t $t $bg
+        active_workspace  $bg $bg $t
+        inactive_workspace $bg $bg $t
+    }
     status_command i3blocks -c ~/.config/i3/i3blocks.conf
-	
 }
 
 exec_always --no-startup-id /home/sphere/.config/i3/auto_layout.py
