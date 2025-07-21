@@ -6,7 +6,7 @@ set $mod Mod1
 font pango:monospace 8
 
 # what? -----------------------------------------------------------------
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -207,7 +207,7 @@ bar {
 	
 }
 
-exec_always --no-startup-id /home/sphere/.config/i3/auto_layout.py
+exec_always --no-startup-id /home/jhe/.config/i3/auto_layout.py
 
 # Start gnome-keyring-daemon to manage keys + other what?s
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg
